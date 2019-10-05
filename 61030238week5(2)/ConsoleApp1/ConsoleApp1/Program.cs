@@ -6,19 +6,17 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Line 1");
-            Console.WriteLine("Line 2");
-            Console.WriteLine("Line 3");
-        line4:
-            Console.WriteLine("Line 4");
-            Console.WriteLine("Line 5");
-            Console.WriteLine("Line 6");
-            goto line10;
-            Console.WriteLine("Line 7");
-            Console.WriteLine("Line 8");
-            Console.WriteLine("Line 9");
-        line10:
-            Console.WriteLine("Line 10");
+            int point = 68; // ทดลองเปลี่ยนเป็น Console.ReadLine() เพื่อรับค่าจากผู้ใช้
+            if (point < 50)
+                Console.WriteLine("Grade F");
+            else if (point < 60)
+                Console.WriteLine("Grade D");
+            else if (point < 70)
+                Console.WriteLine("Grade C");
+            else if (point < 80)
+                Console.WriteLine("Grade B");
+            else
+                Console.WriteLine("Grade A");
         }
     }
 }
