@@ -6,19 +6,46 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Line 1");
-            Console.WriteLine("Line 2");
-            Console.WriteLine("Line 3");
-        line4:
-            Console.WriteLine("Line 4");
-            Console.WriteLine("Line 5");
-            Console.WriteLine("Line 6");
-            goto line10;
-            Console.WriteLine("Line 7");
-            Console.WriteLine("Line 8");
-            Console.WriteLine("Line 9");
-        line10:
-            Console.WriteLine("Line 10");
+            int x = 200, y = 4;
+            int count = 0;
+            string[,] array = new string[x, y];
+
+            // Initialize the array:
+            for (int i = 0; i < x; i++)
+
+                for (int j = 0; j < y; j++)
+                    array[i, j] = (++count).ToString();
+
+            // Read input:
+            Console.Write("Enter the number to search for: ");
+
+            // Input a string:
+            string myNumber = Console.ReadLine();
+
+            // Search:
+            for (int i = 0; i < x; i++)
+            {
+                for (int j = 0; j < y; j++)
+                {
+                    if (array[i, j].Equals(myNumber))
+                    {
+                        goto Found;
+                    }
+                }
+            }
+
+            Console.WriteLine("The number {0} was not found.", myNumber);
+            goto Finish;
+
+        Found:
+            Console.WriteLine("The number {0} is found.", myNumber);
+
+        Finish:
+            Console.WriteLine("End of search.");
+
+            // Keep the console open in debug mode.
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
         }
     }
 }
