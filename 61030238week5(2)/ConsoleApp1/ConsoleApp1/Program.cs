@@ -6,19 +6,14 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Line 1");
-            Console.WriteLine("Line 2");
-            Console.WriteLine("Line 3");
-        line4:
-            Console.WriteLine("Line 4");
-            Console.WriteLine("Line 5");
-            Console.WriteLine("Line 6");
-            goto line10;
-            Console.WriteLine("Line 7");
-            Console.WriteLine("Line 8");
-            Console.WriteLine("Line 9");
-        line10:
-            Console.WriteLine("Line 10");
+            for (int i = 1; i <= 12; i++)
+            {
+                for (int j = 1; j <= 12; j++)
+                {
+                    Console.Write("{0, 4}", i * j);
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
