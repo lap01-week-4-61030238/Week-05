@@ -6,19 +6,31 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Line 1");
-            Console.WriteLine("Line 2");
-            Console.WriteLine("Line 3");
-        line4:
-            Console.WriteLine("Line 4");
-            Console.WriteLine("Line 5");
-            Console.WriteLine("Line 6");
-            goto line10;
-            Console.WriteLine("Line 7");
-            Console.WriteLine("Line 8");
-            Console.WriteLine("Line 9");
-        line10:
-            Console.WriteLine("Line 10");
+            Console.Write("Input your grade (A, B, C, D or F) : ");
+            string gradeString = Console.ReadLine();
+            string message;
+            switch (gradeString.ToUpper())
+            {
+                case "A":
+                    message = "Excellent";
+                    break;
+                case "B":
+                    message = "Good";
+                    break;
+                case "C":
+                    message = "Cool";
+                    break;
+                case "D":
+                    message = "Try";
+                    break;
+                case "F":
+                    message = "Get out!!";
+                    break;
+                default:
+                    message = "Incorrect grade";
+                    break;
+            }
+            Console.WriteLine(message);
         }
     }
 }
