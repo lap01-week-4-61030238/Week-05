@@ -6,19 +6,24 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Line 1");
-            Console.WriteLine("Line 2");
-            Console.WriteLine("Line 3");
-        line4:
-            Console.WriteLine("Line 4");
-            Console.WriteLine("Line 5");
-            Console.WriteLine("Line 6");
-            goto line10;
-            Console.WriteLine("Line 7");
-            Console.WriteLine("Line 8");
-            Console.WriteLine("Line 9");
-        line10:
-            Console.WriteLine("Line 10");
+            Console.WriteLine("---- Begin of While statement.");
+            int n = 1;
+            while (n < 1)
+            {
+                Console.WriteLine(" Current value of n is {0}", n);
+                n++;
+            }
+            Console.WriteLine("---- End of While statement.");
+
+            Console.WriteLine("---- Begin of Do..While statement.");
+            n = 1;
+            do
+            {
+                Console.WriteLine(" Current value of n is {0}", n);
+                n++;
+            }
+            while (n < 1);
+            Console.WriteLine("---- End of Do..While statement.");
         }
     }
 }
